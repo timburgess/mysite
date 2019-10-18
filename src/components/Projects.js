@@ -16,22 +16,22 @@ import src4 from '../img/2019-02-19-16.png'
 import src5 from '../img/2019-02-20.png'
 import src6 from '../img/2019-02-22.png'
 import src7 from '../img/2019-03-02.png'
-import src8 from '../img/2019-03-06.png'
-import src9 from '../img/2019-03-07.png'
-import src10 from '../img/2019-03-08.png'
-import src11 from '../img/2019-03-09.png'
-import src12 from '../img/2019-03-12.png'
-import src13 from '../img/2019-03-12-18.png'
-import src14 from '../img/2019-03-13.png'
-import src15 from '../img/2019-03-27.png'
-import src16 from '../img/2019-08-01.png'
-import src17 from '../img/2019-01-23.png'
-import src18 from '../img/2019-01-23-07.png'
-import src19 from '../img/2019-01-16.png'
-import src20 from '../img/2019-01-02.png'
-import src21 from '../img/2019-10-15.png'
-import src22 from '../img/2018-11-27.png'
-import src23 from '../img/2019-10-19.png'
+import src8 from '../img/2019-10-19.png'
+import src9 from '../img/2019-03-06.png'
+import src10 from '../img/2019-03-07.png'
+import src11 from '../img/2019-03-08.png'
+import src12 from '../img/2019-03-09.png'
+import src13 from '../img/2019-03-12.png'
+import src14 from '../img/2019-03-12-18.png'
+import src15 from '../img/2019-03-13.png'
+import src16 from '../img/2019-03-27.png'
+import src17 from '../img/2019-08-01.png'
+import src18 from '../img/2019-01-23.png'
+import src19 from '../img/2019-01-23-07.png'
+import src20 from '../img/2019-01-16.png'
+import src21 from '../img/2019-01-02.png'
+import src22 from '../img/2019-10-15.png'
+import src23 from '../img/2018-11-27.png'
 import src24 from '../img/2018-09-06.png'
 
 const SCREENSHOTS = [
@@ -65,67 +65,67 @@ const SCREENSHOTS = [
   },
   {
     src: src8,
-    title: 'Map list view with popup links',
+    title: 'Landing page for geocoding service',
   },
   {
     src: src9,
-    title: 'In-map project geoedit with auto-routing',
+    title: 'Map list view with popup links',
   },
   {
     src: src10,
-    title: 'Multiple Sub-projects detail capture',
+    title: 'In-map project geoedit with auto-routing',
   },
   {
     src: src11,
-    title: 'Road project works segment structuring',
+    title: 'Multiple Sub-projects detail capture',
   },
   {
     src: src12,
-    title: 'In form state management via dialogs',
+    title: 'Road project works segment structuring',
   },
   {
     src: src13,
-    title: 'Custom word search/multiselect for vast options',
+    title: 'In form state management via dialogs',
   },
   {
     src: src14,
-    title: 'Geographic overview with drill-down',
+    title: 'Custom word search/multiselect for vast options',
   },
   {
     src: src15,
-    title: 'Form capture with strategy tagging',
+    title: 'Geographic overview with drill-down',
   },
   {
     src: src16,
-    title: 'List filter with type search/multiselect',
+    title: 'Form capture with strategy tagging',
   },
   {
     src: src17,
-    title: 'Treeview in drawer and tabled selection result',
+    title: 'List filter with type search/multiselect',
   },
   {
     src: src18,
-    title: 'Dynamic SVG in Leaflet map',
+    title: 'Treeview in drawer and tabled selection result',
   },
   {
     src: src19,
-    title: 'Slide-in drawer with selection details',
+    title: 'Dynamic SVG in Leaflet map',
   },
   {
     src: src20,
-    title: '3D field render and point description',
+    title: 'Slide-in drawer with selection details',
   },
   {
     src: src21,
-    title: 'Data overlay on Leaflet with sliding legend',
+    title: '3D field render and point description',
   },
   {
     src: src22,
-    title: 'Satellite pass availability for area selection',
+    title: 'Data overlay on Leaflet with sliding legend',
   },
   {
     src: src23,
-    title: 'Landing page for geocoding service',
+    title: 'Satellite pass availability for area selection',
   },
   {
     src: src24,
@@ -158,7 +158,6 @@ const Projects = () => {
   }
 
   const imgClick = id => {
-    console.log('imgclick', id)
     setId(id)
     setOpen(true)
   }
