@@ -1,0 +1,36 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: #fff;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    justify-content: center;
+  }
+  header > button {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
