@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 // import DialogContent from '@material-ui/core/DialogContent'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListItem from '@material-ui/core/ListItem'
-import List from '@material-ui/core/List'
-import Divider from '@material-ui/core/Divider'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
@@ -22,26 +17,124 @@ import src3 from '../img/2019-02-19.png'
 import src4 from '../img/2019-02-19-16.png'
 import src5 from '../img/2019-02-20.png'
 import src6 from '../img/2019-02-22.png'
-// import src7 from '../img/2019-03-02.png'
-// import src8 from '../img/2019-03-06.png'
-// import src9 from '../img/2019-03-07.png'
-// import src10 from '../img/2019-03-08.png'
-// import src11 from '../img/2019-03-09.png'
-// import src12 from '../img/2019-03-12.png'
-// import src13 from '../img/2019-03-12-18.png'
-// import src14 from '../img/2019-03-13.png'
-// import src15 from '../img/2019-03-27.png'
-// import src16 from '../img/2019-08-01.png'
-// import src17 from '../img/2019-01-23.png'
-// import src18 from '../img/2019-01-23-07.png'
-// import src19 from '../img/2019-01-16.png'
-// import src20 from '../img/2019-01-02.png'
-// import src21 from '../img/2019-10-15.png'
-// import src22 from '../img/2018-11-27.png'
-// import src23 from '../img/2018-11-02.png'
-// import src24 from '../img/2018-09-06.png'
+import src7 from '../img/2019-03-02.png'
+import src8 from '../img/2019-03-06.png'
+import src9 from '../img/2019-03-07.png'
+import src10 from '../img/2019-03-08.png'
+import src11 from '../img/2019-03-09.png'
+import src12 from '../img/2019-03-12.png'
+import src13 from '../img/2019-03-12-18.png'
+import src14 from '../img/2019-03-13.png'
+import src15 from '../img/2019-03-27.png'
+import src16 from '../img/2019-08-01.png'
+import src17 from '../img/2019-01-23.png'
+import src18 from '../img/2019-01-23-07.png'
+import src19 from '../img/2019-01-16.png'
+import src20 from '../img/2019-01-02.png'
+import src21 from '../img/2019-10-15.png'
+import src22 from '../img/2018-11-27.png'
+import src23 from '../img/2018-11-02.png'
+import src24 from '../img/2018-09-06.png'
 
-const title = ['Interactive map within project form']
+const SCREENSHOTS = [
+  {
+    src: src1,
+    title: 'Interactive map within project form',
+  },
+  {
+    src: src2,
+    title: 'Layout and flow for login, new account signup and password reset',
+  },
+  {
+    src: src3,
+    title: 'Project overview with editable map and subsections',
+  },
+  {
+    src: src4,
+    title: 'Project document and image management',
+  },
+  {
+    src: src5,
+    title: 'Infinite list with multivalue filtered search',
+  },
+  {
+    src: src6,
+    title: 'Stepped multi-page data capture',
+  },
+  {
+    src: src7,
+    title: 'Project stage data capture with taggable funding',
+  },
+  {
+    src: src8,
+    title: 'Map list view with popup links',
+  },
+  {
+    src: src9,
+    title: 'In-map project geography with auto-routing',
+  },
+  {
+    src: src10,
+    title: 'Multiple Sub-projects detail capture',
+  },
+  {
+    src: src11,
+    title: 'Road project works segment structuring',
+  },
+  {
+    src: src12,
+    title: 'In form state management via dialogs',
+  },
+  {
+    src: src13,
+    title: 'Custom word search/multiselect for extensive options',
+  },
+  {
+    src: src14,
+    title: 'Overview with drill-down',
+  },
+  {
+    src: src15,
+    title: 'Form capture with strategy tagging',
+  },
+  {
+    src: src16,
+    title: 'List filter with type search/multiselect',
+  },
+  {
+    src: src17,
+    title: 'Treeview in drawer and tabled selection result',
+  },
+  {
+    src: src18,
+    title: 'Dynamic SVG in Leaflet map',
+  },
+  {
+    src: src19,
+    title: 'Slide-in drawer with selection details',
+  },
+  {
+    src: src20,
+    title: '3D field render and point description',
+  },
+  {
+    src: src21,
+    title: 'Data overlay on Leaflet with sliding legend',
+  },
+  {
+    src: src22,
+    title: 'Satellite pass availability for area selection',
+  },
+  {
+    src: src23,
+    title: 'Landing page for geocoding',
+  },
+  {
+    src: src24,
+    title: 'Shopify plugin (React with Shopify Polaris components)',
+  },
+]
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />
 })
@@ -60,11 +153,7 @@ const Projects = () => {
   const classes = useStyles()
 
   const [open, setOpen] = useState(false)
-  const [id, setId] = useState(0)
-
-  const handleClickOpen = () => {
-    setOpen(true)
-  }
+  const [id, setId] = useState(1)
 
   const handleClose = () => {
     setOpen(false)
@@ -80,31 +169,9 @@ const Projects = () => {
     <div className="projects">
       <p>Screenshots from the last 12 months</p>
       <div className="container">
-        <img src={src1} alt="screenshot" onClick={() => imgClick(1)} />
-        <img src={src2} alt="screenshot" onClick={() => imgClick(2)} />
-        <img src={src3} alt="screenshot" onClick={() => imgClick(3)} />
-        <img src={src4} alt="screenshot" onClick={() => imgClick(4)} />
-        <img src={src5} alt="screenshot" onClick={() => imgClick(5)} />
-        <img src={src6} alt="screenshot" onClick={() => imgClick(6)} />
-        {/*
-      <img src={src7} alt="screenshot" />
-      <img src={src8} alt="screenshot" />
-      <img src={src9} alt="screenshot" />
-      <img src={src10} alt="screenshot" />
-      <img src={src11} alt="screenshot" />
-      <img src={src12} alt="screenshot" />
-      <img src={src13} alt="screenshot" />
-      <img src={src14} alt="screenshot" />
-      <img src={src15} alt="screenshot" />
-      <img src={src16} alt="screenshot" />
-      <img src={src17} alt="screenshot" />
-      <img src={src18} alt="screenshot" />
-      <img src={src19} alt="screenshot" />
-      <img src={src20} alt="screenshot" />
-      <img src={src21} alt="screenshot" />
-      <img src={src22} alt="screenshot" />
-      <img src={src23} alt="screenshot" />
-<img src={src24} alt="screenshot" /> */}
+        {SCREENSHOTS.map((shot, index) => (
+          <img key={shot.title} src={shot.src} alt="screenshot" onClick={() => imgClick(index)} />
+        ))}
       </div>
       <Footer />
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
@@ -114,26 +181,13 @@ const Projects = () => {
               <CloseIcon />
             </IconButton>
             <Typography variant="subtitle2" className={classes.title}>
-              {title[id - 1]}
+              {SCREENSHOTS[id].title}
             </Typography>
           </Toolbar>
         </AppBar>
         <div className="dialog-content">
-          <img className="dialog-img" src={src1} alt="screenshot" />
+          <img className="dialog-img" src={SCREENSHOTS[id].src} alt="screenshot" />
         </div>
-         { /*
-         <div className="dialog-content">
-            Foo
-          </div>
-        <List>
-          <ListItem button>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-          </ListItem>
-        </List> */}
       </Dialog>
     </div>
   )
