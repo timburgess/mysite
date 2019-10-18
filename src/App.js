@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import Header from './components/Header'
 import Home from './components/Home'
 import Projects from './components/Projects'
@@ -13,13 +14,15 @@ const App = () => {
   const setPage = page => () => setPageState(page)
 
   return (
-    <div className={cx({ fixpage: page !== 'projects' })}>
-      <Header setPage={setPage} />
-      {page === 'home' && <Home setPage={setPage} />}
-      {page === 'projects' && <Projects setPage={setPage} />}
-      {page === 'about' && <About setPage={setPage} />}
-      {page === 'contact' && <Contact setPage={setPage} />}
-    </div>
+    <CssBaseline>
+      <div className={cx({ fixpage: page !== 'projects' })}>
+        <Header setPage={setPage} />
+        {page === 'home' && <Home setPage={setPage} />}
+        {page === 'projects' && <Projects setPage={setPage} />}
+        {page === 'about' && <About setPage={setPage} />}
+        {page === 'contact' && <Contact setPage={setPage} />}
+      </div>
+    </CssBaseline>
   )
 }
 
