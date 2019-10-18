@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Dialog from '@material-ui/core/Dialog'
-// import DialogContent from '@material-ui/core/DialogContent'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
 import CloseIcon from '@material-ui/icons/Close'
 import Slide from '@material-ui/core/Slide'
 import Footer from './Footer'
@@ -33,7 +31,7 @@ import src19 from '../img/2019-01-16.png'
 import src20 from '../img/2019-01-02.png'
 import src21 from '../img/2019-10-15.png'
 import src22 from '../img/2018-11-27.png'
-import src23 from '../img/2018-11-02.png'
+import src23 from '../img/2019-10-19.png'
 import src24 from '../img/2018-09-06.png'
 
 const SCREENSHOTS = [
@@ -127,7 +125,7 @@ const SCREENSHOTS = [
   },
   {
     src: src23,
-    title: 'Landing page for geocoding',
+    title: 'Landing page for geocoding service',
   },
   {
     src: src24,
@@ -180,9 +178,7 @@ const Projects = () => {
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
-            <Typography variant="subtitle2" className={classes.title}>
-              {SCREENSHOTS[id].title}
-            </Typography>
+            <div className={classes.title}>{SCREENSHOTS[id].title}</div>
           </Toolbar>
         </AppBar>
         <div className="dialog-content">

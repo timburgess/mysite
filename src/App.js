@@ -8,8 +8,7 @@ import Contact from './components/Contact'
 
 // this is such a simple thing why bring in react-router */
 const App = () => {
-  // const [page, setPageState] = useState('home')
-  const [page, setPageState] = useState('projects')
+  const [page, setPageState] = useState('home')
 
   const setPage = page => () => setPageState(page)
 

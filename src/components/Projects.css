@@ -30,6 +30,7 @@
 
 .container > img {
   width: 100%;
+  cursor: pointer;
   max-height: 20rem;
   box-shadow: 10px 10px 22px 0px rgba(186, 186, 186, 1);
   object-fit: contain;
