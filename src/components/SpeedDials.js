@@ -47,7 +47,7 @@ const actions = [
   },
 ]
 
-const SpeedDials = ()  => {
+const SpeedDials = () => {
   const classes = useStyles()
   const [open, setOpen] = useState(false)
 
@@ -69,7 +69,7 @@ const SpeedDials = ()  => {
         onOpen={handleOpen}
         open={open}
         direction="up"
-        FabProps={{ color: 'default' }}
+        FabProps={{ color: 'inherit' }}
       >
         {actions.map(action => (
           <SpeedDialAction

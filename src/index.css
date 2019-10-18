@@ -21,13 +21,17 @@ body {
   /* height: calc(var(--vh, 1vh) * 100); */
 }
 
-/* some pages are fixed & we flexbox-grow the main div */
+/* pages other than projects are fixed & we flexbox-grow the main div */
 .fixpage {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* override mui default button */
+button {
+  background: #fff !important;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
