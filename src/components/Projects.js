@@ -69,7 +69,7 @@ const SCREENSHOTS = [
   },
   {
     src: src9,
-    title: 'In-map project geography with auto-routing',
+    title: 'In-map project geoedit with auto-routing',
   },
   {
     src: src10,
@@ -85,11 +85,11 @@ const SCREENSHOTS = [
   },
   {
     src: src13,
-    title: 'Custom word search/multiselect for extensive options',
+    title: 'Custom word search/multiselect for vast options',
   },
   {
     src: src14,
-    title: 'Overview with drill-down',
+    title: 'Geographic overview with drill-down',
   },
   {
     src: src15,

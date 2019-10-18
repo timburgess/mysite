@@ -48,10 +48,9 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  /* border: 1px solid black; */
 }
 .dialog-img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
