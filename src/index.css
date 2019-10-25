@@ -16,21 +16,16 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-#root {
+/* #root { */
   /* height: 100vh; fallback for browsers that do not support custom properties */
   /* height: calc(var(--vh, 1vh) * 100); */
-}
+/* } */
 
 /* pages other than projects are fixed & we flexbox-grow the main div */
-.fixpage {
+.fixedpage {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* override mui default button */
-button {
-  background: #fff !important;
 }
 
 code {

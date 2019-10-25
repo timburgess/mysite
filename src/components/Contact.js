@@ -75,7 +75,7 @@ const Contact = () => {
                 className={classes.multilineField}
                 margin="normal"
               />
-              <Button variant="contained" className={classes.button} onClick={handleSubmit}>
+              <Button variant="contained" className={classes.button} onClick={handleSubmit} color="primary">
                 Submit
               </Button>
             </Fragment>
