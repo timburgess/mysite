@@ -5,48 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  /* font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 0.05rem;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.multilineLabel {
-  margin-top: 1rem;
-  margin-left: 8px;
-  opacity: 0.6,
-}
-
-.contact-message {
-  align-self: center;
-}
-
-.contact-details {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-}
-
-@media screen and (min-width: 600px) {
-  .contact-details {
-    margin-bottom: 2rem;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .contact-details {
-    margin-bottom: 3rem;
-    font-size: 1rem;
-  }
-}
-
-.contact-details > div {
-  text-align: center;
+  letter-spacing: 0.05rem; */
 }
