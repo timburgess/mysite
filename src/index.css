@@ -6,14 +6,10 @@
   --header-height: 4rem;
 }
 
-html {
-  scrollbar-color: auto #fff;
-}
-
 body {
   margin: 0;
   background-color: #fff !important;
-  overflow-y: scroll;
+  scrollbar-width: none; /* hide scrollbar in firefox */
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -33,7 +29,28 @@ body {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 } */
 
-/* chrome scrollbar all white */
-::-webkit-scrollbar {
-    background: #fff;
+
+/* no scrollbar + white in safari and chrome */
+::-webkit-scrollbar { 
+  display: none;
+  background-color: #fff;
 }
+
+/* hide scrollbar in mobile */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  /* background-color: transparent; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  /* background-color: transparent; */
+}
+
+/* remove btn focus outlines from firefox */
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }
