@@ -6,8 +6,14 @@
   --header-height: 4rem;
 }
 
+html {
+  scrollbar-color: auto #fff;
+}
+
 body {
   margin: 0;
+  background-color: #fff !important;
+  overflow-y: scroll;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -16,11 +22,6 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-/* #root { */
-  /* height: 100vh; fallback for browsers that do not support custom properties */
-  /* height: calc(var(--vh, 1vh) * 100); */
-/* } */
-
 /* pages other than projects are fixed & we flexbox-grow the main div */
 .fixedpage {
   height: 100vh;
@@ -28,6 +29,11 @@ body {
   flex-direction: column;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+} */
+
+/* chrome scrollbar all white */
+::-webkit-scrollbar {
+    background: #fff;
 }

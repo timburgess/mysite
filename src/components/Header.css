@@ -5,9 +5,9 @@ header {
   right: 0;
   height: var(--header-height);
   background: #fff;
-
   display: flex;
   justify-content: space-around;
+  z-index: 1;
 }
 
 @media screen and (min-width: 600px) {
